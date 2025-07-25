@@ -1,0 +1,612 @@
+<!DOCTYPE html><html lang="id"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kompatibilitas Capricorn INTJ &amp; Pisces INFJ: Panduan Komprehensif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --muted: #7f8c8d;
+            --background: #fefefe;
+            --surface: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary);
+            background-color: var(--background);
+            line-height: 1.7;
+            overflow-x: hidden;
+            word-wrap: break-word;
+        }
+        
+        .serif {
+            font-family: 'Crimson Text', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 73, 94, 0.8) 100%);
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid #e5e7eb;
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+        
+        .toc-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--muted);
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            padding-left: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-link:hover, .toc-link.active {
+            color: var(--accent);
+            border-left-color: var(--accent);
+            background: rgba(52, 152, 219, 0.05);
+        }
+        
+        .toc-link.sub {
+            font-size: 0.875rem;
+            padding-left: 2rem;
+        }
+        
+        .section-header {
+            border-left: 4px solid var(--accent);
+            padding-left: 1.5rem;
+            margin: 3rem 0 2rem 0;
+        }
+        
+        .citation {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .citation:hover {
+            text-decoration: underline;
+        }
+        
+        .insight-highlight {
+            background: linear-gradient(120deg, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0.05) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .bento-item {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @media (max-width: 1024px) {
+            .toc-fixed {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .toc-fixed.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .bento-item {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 390px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-menu-toggle" class="lg:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-lg shadow-lg">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+
+    <!-- Table of Contents -->
+    <nav id="toc" class="toc-fixed">
+      <div class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">Daftar Isi</h2>
+        <a href="#hero" class="toc-link">Ikhtisar</a>
+        <a href="#compatibility-overview" class="toc-link">1. Ikhtisar Kompatibilitas</a>
+        <a href="#general-alignment" class="toc-link sub">1.1 Keselarasan Umum</a>
+        <a href="#zodiac-dynamics" class="toc-link sub">1.2 Dinamika Zodiak</a>
+        <a href="#relationship-strengths" class="toc-link">2. Kekuatan Hubungan</a>
+        <a href="#intellectual-depth" class="toc-link sub">2.1 Kedalaman Intelektual</a>
+        <a href="#logic-emotion-balance" class="toc-link sub">2.2 Keseimbangan Logika-Emosi</a>
+        <a href="#shared-values" class="toc-link sub">2.3 Nilai Bersama</a>
+        <a href="#lifestyle-complement" class="toc-link sub">2.4 Gaya Hidup Komplementer</a>
+        <a href="#potential-challenges" class="toc-link">3. Tantangan Potensial</a>
+        <a href="#emotional-expression" class="toc-link sub">3.1 Ekspresi Emosional</a>
+        <a href="#communication-styles" class="toc-link sub">3.2 Gaya Komunikasi</a>
+        <a href="#energy-differences" class="toc-link sub">3.3 Perbedaan Energi</a>
+        <a href="#perfectionism-sensitivity" class="toc-link sub">3.4 Perfeksionisme &amp; Sensitivitas</a>
+        <a href="#relationship-aspects" class="toc-link">4. Aspek Hubungan</a>
+        <a href="#communication-aspect" class="toc-link sub">4.1 Komunikasi</a>
+        <a href="#values-aspect" class="toc-link sub">4.2 Nilai-nilai</a>
+        <a href="#lifestyle-aspect" class="toc-link sub">4.3 Gaya Hidup</a>
+        <a href="#intimacy-aspect" class="toc-link sub">4.4 Keintiman</a>
+        <a href="#recommendations" class="toc-link">5. Rekomendasi</a>
+        <a href="#open-communication" class="toc-link sub">5.1 Komunikasi Terbuka</a>
+        <a href="#appreciate-differences" class="toc-link sub">5.2 Menghargai Perbedaan</a>
+        <a href="#shared-vision" class="toc-link sub">5.3 Visi Bersama</a>
+        <a href="#emotion-logic-space" class="toc-link sub">5.4 Ruang untuk Emosi &amp; Logika</a>
+        <a href="#work-life-balance" class="toc-link sub">5.5 Keseimbangan Kerja-Hidup</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section id="hero" class="relative min-h-screen flex items-center">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <img src="https://kimi-web-img.moonshot.cn/img/media.allure.com/9356f1e88d021aeb1c41568f49f9d2ea951b23bb.jpg" alt="Pasangan zodiac Capricorn dan Pisces dalam gaya seni minimalis" class="absolute inset-0 w-full h-full object-cover opacity-20" size="wallpaper" aspect="wide" query="pasangan capricorn pisces seni minimalis" referrerpolicy="no-referrer" data-modified="1" data-score="11481.00"/>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-16">
+          <div class="bento-grid items-center">
+            <div class="bento-item bg-white/95 backdrop-blur-sm">
+              <h1 class="hero-title serif mb-6">
+                <em>Kompatibilitas</em>
+                <br/>
+                Capricorn INTJ &amp; Pisces INFJ
+              </h1>
+              <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                Mengeksplorasi kedalaman hubungan intuitif antara kepribadian logis yang terfokus pada tujuan dan pasangan emosional yang idealis.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm text-gray-500">
+                <span class="flex items-center gap-2">
+                  <i class="fas fa-chart-line"></i>
+                  Analisis Komprehensif
+                </span>
+                <span class="flex items-center gap-2">
+                  <i class="fas fa-heart"></i>
+                  Berbasis Penelitian
+                </span>
+              </div>
+            </div>
+
+            <div class="bento-item bg-white/90 backdrop-blur-sm">
+              <h3 class="text-lg font-semibold mb-4">Potensi Utama</h3>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="font-medium">Kedalaman Intelektual</div>
+                    <div class="text-sm text-gray-600">Koneksi intuitif dan diskusi filosofis</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="font-medium">Keseimbangan Dinamis</div>
+                    <div class="text-sm text-gray-600">Logika analitis bertemu empati emosional</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="font-medium">Visi Bersama</div>
+                    <div class="text-sm text-gray-600">Tujuan jangka panjang dan nilai idealis</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Executive Summary -->
+      <section class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16">
+        <div class="insight-highlight">
+          <h2 class="text-2xl font-semibold mb-4">Ikhtisar Eksekutif</h2>
+          <p class="text-lg leading-relaxed">
+            Kompatibilitas antara pria Capricorn INTJ dan wanita Pisces INFJ menawarkan <strong>potensi untuk hubungan yang dalam dan bermakna</strong>, didorong oleh intuisi dan idealisme bersama. Namun, perbedaan signifikan dalam ekspresi emosional (logika INTJ vs. perasaan INFJ) dan gaya komunikasi (langsung vs. harmonis) dapat menjadi <strong>tantangan utama</strong>. Kekuatan hubungan ini terletak pada <strong>kedalaman intelektual, keseimbangan potensial antara logika dan emosi, serta kemampuan untuk saling melengkapi</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 1: Compatibility Overview -->
+      <section id="compatibility-overview" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16">
+        <div class="section-header">
+          <h2 class="text-3xl font-bold serif">1. Ikhtisar Kompatibilitas</h2>
+        </div>
+
+        <div id="general-alignment" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">1.1 Keselarasan Umum antara INTJ dan INFJ</h3>
+          <p class="mb-6">
+            Pasangan INTJ (Introverted, Intuitive, Thinking, Judging) dan INFJ (Introverted, Intuitive, Feeling, Judging) secara umum memiliki <strong>potensi kompatibilitas yang baik</strong>, terutama karena keduanya adalah tipe intuitif (N) yang cenderung terhubung pada tingkat yang lebih dalam dan abstrak <a href="https://boo.world/infj-personality/infj-intj-compatibility" class="citation">[2]</a>. Kedua tipe ini sering menikmati diskusi mendalam tentang ide dan konsep, serta memiliki minat intelektual dan kreatif yang luas.
+          </p>
+
+          <div class="insight-highlight">
+            <h4 class="font-semibold mb-3">Kesamaan Kunci:</h4>
+            <ul class="space-y-2">
+              <li><strong>Visioner dan berorientasi pada tujuan</strong> - Mampu membayangkan tujuan masa depan dan merencanakan ke belakang</li>
+              <li><strong>Idealisme bersama</strong> - Keduanya mencari makna dan pertumbuhan pribadi</li>
+              <li><strong>Kebutuhan akan waktu sendiri</strong> - Keduanya memahami kebutuhan akan ruang pribadi</li>
+            </ul>
+          </div>
+
+          <p class="mb-6">
+            INFJ dapat membantu INTJ memahami konteks emosional dan sosial, sementara INTJ dapat membantu INFJ mengembangkan dan menerapkan ide-ide mereka secara efektif. Namun, tantangan muncul dari <strong>perbedaan preferensi pengambilan keputusan</strong>: INTJ menggunakan Extraverted Thinking (Te) yang berfokus pada objektivitas dan logika, sedangkan INFJ menggunakan Extraverted Feeling (Fe) yang mempertimbangkan harmoni dan dampak emosional.
+          </p>
+        </div>
+
+        <div id="zodiac-dynamics" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">1.2 Dinamika Zodiak: Capricorn (Bumi) dan Pisces (Air)</h3>
+          <p class="mb-6">
+            Dalam astrologi, Capricorn (pria, 22 Desember - 19 Januari) dan Pisces (wanita, 19 Februari - 20 Maret) merupakan pasangan yang menarik karena perbedaan elemen mereka: <strong>Capricorn adalah tanda Bumi yang praktis dan ambisius, sedangkan Pisces adalah tanda Air yang intuitif dan penuh kasih</strong>
+            <a href="https://www.ganeshaspeaks.com/zodiac-signs/compatibility/capricorn-man-pisces-woman/" class="citation">[7]</a>, <a href="https://www.cosmopolitan.com/sex-love/a38573782/capricorn-and-pisces/" class="citation">[8]</a>.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bento-item">
+              <h4 class="font-semibold text-lg mb-3 text-blue-600">
+                <i class="fas fa-mountain mr-2"></i>Capricorn INTJ Pria
+              </h4>
+              <ul class="space-y-2 text-sm">
+                <li>• Disiplin dan ambisius</li>
+                <li>• Praktis dan berorientasi pada kesuksesan</li>
+                <li>• Bertanggung jawab dan profesional</li>
+                <li>• Cenderung workaholic</li>
+                <li>• Emosi terkendali dan logis</li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4 class="font-semibold text-lg mb-3 text-purple-600">
+                <i class="fas fa-water mr-2"></i>Pisces INFJ Wanita
+              </h4>
+              <ul class="space-y-2 text-sm">
+                <li>• Imajinatif dan empatik</li>
+                <li>• Intuitif dan spiritual</li>
+                <li>• Sensitif dan penuh kasih</li>
+                <li>• Kreatif dan berorientasi pada impian</li>
+                <li>• Ekspresif secara emosional</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mb-6">
+            Kombinasi ini dapat menciptakan keseimbangan di mana Capricorn membantu membumikan ide-ide Pisces dan memberikan stabilitas, sementara Pisces dapat membantu Capricorn terhubung dengan sisi emosional dan kreatif mereka. Namun, perbedaan mendasar dalam pendekatan hidup dapat menjadi sumber gesekan jika tidak dikelola dengan baik.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Relationship Strengths -->
+      <section id="relationship-strengths" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 bg-gray-50">
+        <div class="section-header">
+          <h2 class="text-3xl font-bold serif">2. Kekuatan Hubungan</h2>
+        </div>
+
+        <div id="intellectual-depth" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">2.1 Kedalaman Intelektual dan Intuitif</h3>
+          <p class="mb-6">
+            Pasangan INTJ Capricorn pria dan INFJ Pisces wanita memiliki potensi untuk membangun hubungan yang <strong>kaya akan kedalaman intelektual dan intuitif</strong>. Keduanya memiliki fungsi kognitif dominan Introverted Intuition (Ni), yang berarti mereka sama-sama cenderung memproses informasi secara internal, mencari pola, dan memiliki wawasan mendalam.
+          </p>
+
+          <div class="insight-highlight">
+            <p class="font-medium">
+              &#34;Kemampuan intuitif mereka yang kuat dapat membantu mereka memahami satu sama lain pada tingkat yang lebih dalam, seringkali tanpa perlu banyak kata-kata, menciptakan ikatan yang unik dan istimewa.&#34;
+            </p>
+          </div>
+        </div>
+
+        <div id="logic-emotion-balance" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">2.2 Keseimbangan antara Logika dan Emosi</h3>
+          <p class="mb-6">
+            Salah satu kekuatan utama dalam hubungan ini adalah <strong>potensi untuk menciptakan keseimbangan yang dinamis antara logika dan emosi</strong>. INTJ Capricorn membawa pendekatan analitis dan logis, sementara INFJ Pisces memberikan kepekaan emosional dan pertimbangan terhadap harmoni hubungan.
+          </p>
+        </div>
+
+        <div id="shared-values" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">2.3 Kesamaan Nilai dan Visi Jangka Panjang</h3>
+          <p class="mb-6">
+            Pasangan ini seringkali memiliki <strong>kesamaan dalam hal nilai-nilai inti dan visi jangka panjang</strong>, yang dapat menjadi fondasi yang kuat bagi hubungan mereka. Kedua tipe dikenal karena idealisme dan keinginan mereka untuk tumbuh secara pribadi, mencari makna dan tujuan yang lebih dalam dalam hidup.
+          </p>
+        </div>
+
+        <div id="lifestyle-complement" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">2.4 Saling Melengkapi dalam Gaya Hidup</h3>
+          <p class="mb-6">
+            Pasangan ini dapat menemukan kekuatan dalam <strong>gaya hidup mereka yang saling melengkapi</strong>. INTJ Capricorn dapat membantu INFJ Pisces untuk lebih terorganisir dan fokus, sementara INFJ Pisces dapat membantu INTJ Capricorn untuk lebih rileks dan terhubung dengan sisi emosional mereka.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Potential Challenges -->
+      <section id="potential-challenges" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16">
+        <div class="section-header">
+          <h2 class="text-3xl font-bold serif">3. Tantangan Potensial</h2>
+        </div>
+
+        <div id="emotional-expression" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">3.1 Perbedaan dalam Mengekspresikan dan Memproses Emosi</h3>
+          <p class="mb-6">
+            Salah satu tantangan paling signifikan adalah <strong>perbedaan mendasar dalam cara mereka mengekspresikan dan memproses emosi</strong>. INTJ Capricorn cenderung lebih mengutamakan logika dan analisis, sementara INFJ Pisces sangat peka terhadap emosi dan membutuhkan kedalaman emosional dalam hubungan.
+          </p>
+
+          <div class="insight-highlight">
+            <h4 class="font-semibold mb-3">Potensi Konflik Emosional:</h4>
+            <p>INFJ Pisces mungkin merasa bahwa INTJ Capricorn tidak peduli atau tidak memahami mereka, sementara INTJ Capricorn mungkin merasa kewalahan atau bingung dengan kebutuhan emosional INFJ Pisces.</p>
+          </div>
+        </div>
+
+        <div id="communication-styles" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">3.2 Gaya Komunikasi: Langsung vs. Harmonis</h3>
+          <p class="mb-6">
+            Perbedaan gaya komunikasi dapat menjadi <strong>sumber potensial konflik</strong>. INTJ Capricorn cenderung memiliki gaya komunikasi yang langsung dan berorientasi pada fakta, sementara INFJ Pisces lebih peduli dengan harmoni dan perasaan orang lain.
+          </p>
+        </div>
+
+        <div id="energy-differences" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">3.3 Perbedaan Energi dan Pendekatan terhadap Tujuan</h3>
+          <p class="mb-6">
+            Pasangan ini mungkin menghadapi tantangan karena <strong>perbedaan dalam tingkat energi dan pendekatan mereka terhadap pencapaian tujuan</strong>. INTJ Capricorn dikenal karena ambisi dan disiplinnya yang kuat, sementara INFJ Pisces mungkin memiliki pendekatan yang lebih intuitif dan fleksibel.
+          </p>
+        </div>
+
+        <div id="perfectionism-sensitivity" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">3.4 Potensi Konflik Akibat Sifat Perfeksionis dan Sensitivitas</h3>
+          <p class="mb-6">
+            Konflik dapat muncul dari <strong>kombinasi sifat perfeksionis INTJ Capricorn dan sensitivitas tinggi INFJ Pisces</strong>. INTJ Capricorn mungkin memiliki ekspektasi yang sangat tinggi, sementara INFJ Pisces mudah tersinggung oleh kritik dan dapat merasakan emosi negatif dengan sangat intens.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Relationship Aspects -->
+      <section id="relationship-aspects" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 bg-gray-50">
+        <div class="section-header">
+          <h2 class="text-3xl font-bold serif">4. Kompatibilitas dalam Berbagai Aspek Hubungan</h2>
+        </div>
+
+        <div id="communication-aspect" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">4.1 Komunikasi</h3>
+          <p class="mb-6">
+            Komunikasi antara pasangan ini memiliki potensi untuk menjadi <strong>sangat mendalam dan intelektual, namun juga rentan terhadap kesalahpahaman</strong> jika perbedaan gaya mereka tidak dikelola dengan baik. Keduanya menikmati diskusi tentang ide-ide abstrak, tetapi berbeda dalam cara mengekspresikan diri dan menangani konflik.
+          </p>
+        </div>
+
+        <div id="values-aspect" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">4.2 Nilai-nilai</h3>
+          <p class="mb-6">
+            Pasangan ini umumnya memiliki <strong>sejumlah kesamaan nilai inti yang dapat membentuk dasar yang kuat</strong>, meskipun ada juga beberapa perbedaan yang perlu diperhatikan. Keduanya cenderung idealis dan menghargai pertumbuhan pribadi, pembelajaran, serta pencarian makna dalam hidup.
+          </p>
+        </div>
+
+        <div id="lifestyle-aspect" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">4.3 Gaya Hidup</h3>
+          <p class="mb-6">
+            Gaya hidup mereka dapat <strong>saling melengkapi dengan baik jika mereka mampu memahami dan menghargai perbedaan mereka</strong>. INTJ Capricorn cenderung memiliki gaya hidup yang terstruktur dan berorientasi pada tujuan, sementara INFJ Pisces mungkin lebih fleksibel dan berorientasi pada kesejahteraan emosional.
+          </p>
+        </div>
+
+        <div id="intimacy-aspect" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">4.4 Kecocokan Seksual</h3>
+          <p class="mb-6">
+            Kecocokan seksual antara pasangan Capricorn pria dan Pisces wanita secara umum dianggap <strong>cukup baik dan harmonis</strong>. Capricorn cenderung mengambil peran memimpin, yang bisa sangat cocok dengan sifat Pisces yang mudah beradaptasi dan mengalir seperti air.
+          </p>
+
+          <div class="insight-highlight">
+            <p><strong>Kunci dari kecocokan seksual yang langgeng adalah komunikasi terbuka tentang kebutuhan dan keinginan masing-masing</strong>, serta kemauan untuk saling memenuhi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Recommendations -->
+      <section id="recommendations" class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16">
+        <div class="section-header">
+          <h2 class="text-3xl font-bold serif">5. Saran untuk Meningkatkan Kompatibilitas</h2>
+        </div>
+
+        <div id="open-communication" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">5.1 Meningkatkan Komunikasi Terbuka dan Jujur</h3>
+          <p class="mb-6">
+            Meningkatkan <strong>komunikasi terbuka dan jujur merupakan landasan penting</strong> untuk memperkuat kompatibilitas. Kedua tipe ini sama-sama menghargai keaslian dan kedalaman dalam hubungan.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bento-item">
+              <h4 class="font-semibold mb-3 text-blue-600">Untuk INTJ Capricorn:</h4>
+              <ul class="space-y-2 text-sm">
+                <li>• Berusaha lebih keras untuk mengekspresikan emosi</li>
+                <li>• Menyampaikan kritik dengan lebih lembut</li>
+                <li>• Mendengarkan dengan empati</li>
+                <li>• Memahami kebutuhan emosional pasangan</li>
+              </ul>
+            </div>
+            <div class="bento-item">
+              <h4 class="font-semibold mb-3 text-purple-600">Untuk INFJ Pisces:</h4>
+              <ul class="space-y-2 text-sm">
+                <li>• Lebih langsung dan asertif dalam komunikasi</li>
+                <li>• Tidak mengambil segala sesuatu secara pribadi</li>
+                <li>• Meminta klarifikasi jika perlu</li>
+                <li>• Mengekspresikan kebutuhan dengan jelas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="appreciate-differences" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">5.2 Saling Menghargai Kekuatan dan Perbedaan</h3>
+          <p class="mb-6">
+            <strong>Saling menghargai kekuatan dan perbedaan masing-masing adalah kunci vital</strong> untuk meningkatkan kompatibilitas. Daripada memandang perbedaan sebagai sumber konflik, mereka dapat belajar untuk melihatnya sebagai peluang untuk saling melengkapi.
+          </p>
+        </div>
+
+        <div id="shared-vision" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">5.3 Membangun Visi Bersama untuk Masa Depan</h3>
+          <p class="mb-6">
+            <strong>Membangun visi bersama untuk masa depan merupakan strategi yang sangat efektif</strong> untuk meningkatkan kompatibilitas dan memperkuat ikatan. Kedua tipe ini dikenal karena idealisme dan orientasi jangka panjang mereka.
+          </p>
+        </div>
+
+        <div id="emotion-logic-space" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">5.4 Menciptakan Ruang untuk Emosi dan Logika</h3>
+          <p class="mb-6">
+            Menghormati dan <strong>menciptakan ruang yang seimbang bagi kedua emosi dan logika adalah saran penting</strong> untuk meningkatkan kompatibilitas. Kedua cara pandang tersebut valid dan penting dalam hubungan.
+          </p>
+        </div>
+
+        <div id="work-life-balance" class="mb-12">
+          <h3 class="text-2xl font-semibold mb-6">5.5 Menyeimbangkan Waktu untuk Bekerja dan Bersantai Bersama</h3>
+          <p class="mb-6">
+            Menemukan <strong>keseimbangan yang sehat antara waktu untuk bekerja dan waktu untuk bersantai serta menikmati kebersamaan</strong> adalah saran penting bagi pasangan ini. INTJ Capricorn perlu memahami bahwa meluangkan waktu untuk terhubung secara emosional adalah investasi penting untuk kesehatan hubungan.
+          </p>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 bg-gray-50">
+        <div class="insight-highlight">
+          <h2 class="text-2xl font-semibold mb-4">Kesimpulan</h2>
+          <p class="text-lg leading-relaxed mb-4">
+            Hubungan antara pria Capricorn INTJ dan wanita Pisces INFJ menawarkan potensi luar biasa untuk pertumbuhan, pemahaman, dan koneksi yang mendalam. Meskipun perbedaan dalam ekspresi emosional dan gaya komunikasi dapat menimbulkan tantangan, kekuatan hubungan ini terletak pada kemampuan mereka untuk saling melengkapi dan belajar satu sama lain.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Kunci utama untuk meningkatkan kompatibilitas adalah <strong>komunikasi terbuka dan jujur, saling menghargai kekuatan dan perbedaan, membangun visi bersama, menciptakan ruang untuk emosi dan logika, serta menyeimbangkan waktu bekerja dan bersantai bersama</strong>. Dengan komitmen dan pemahaman, pasangan ini dapat membangun hubungan yang bermakna dan langgeng.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-8 border-t border-gray-200">
+        <div class="text-center text-sm text-gray-500">
+          <p>Analisis ini didasarkan pada penelitian tentang tipe kepribadian MBTI dan astrologi. Setiap hubungan adalah unik dan membutuhkan pemahaman, kompromi, dan komitmen dari kedua belah pihak.</p>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const toc = document.getElementById('toc');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            toc.classList.toggle('open');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active TOC link highlighting
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('section[id], div[id]');
+
+        function updateActiveTocLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveTocLink);
+        updateActiveTocLink(); // Initial call
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!toc.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                toc.classList.remove('open');
+            }
+        });
+    </script>
+  
+
+</body></html>
